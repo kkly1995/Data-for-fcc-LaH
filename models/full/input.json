@@ -1,0 +1,86 @@
+{
+    "_comment": " model parameters",
+    "model": {
+	"type_map":	["La", "H"],
+	"descriptor" :{
+	    "type":		"se_a",
+	    "sel":		[15, 150],
+	    "rcut_smth":	2.00,
+	    "rcut":		4.00,
+	    "neuron":		[25, 50, 100],
+	    "seed":		782917405,
+	    "_comment":		" that's all"
+	},
+	"fitting_net" : {
+	    "seed":		1640170929,
+	    "neuron":		[240, 240, 240],
+	    "_comment":		" that's all"
+	},
+	"_comment":	" that's all"
+    },
+
+    "learning_rate" :{
+	"type":		"exp",
+	"decay_steps":	5000,
+	"start_lr":	0.001,	
+	"stop_lr":	3.51e-8,
+	"_comment":	"that's all"
+    },
+
+    "loss" :{
+	"start_pref_e":	0.02,
+	"limit_pref_e":	1,
+	"start_pref_f":	1000,
+	"limit_pref_f":	10,
+	"start_pref_v":	0.001,
+	"limit_pref_v":	0.1,
+	"_comment":	" that's all"
+    },
+
+    "_comment": " training controls",
+    "training" : {
+	"systems":	[
+			"../../data/aimd/",
+			"../../data/r3m/",
+			"../../data/ensemble0/",
+			"../../data/ensemble1/",
+			"../../data/ensemble2/",
+			"../../data/ensemble3/150GPa/",
+			"../../data/ensemble3/200GPa/",
+			"../../data/ensemble4/150GPa/",
+			"../../data/ensemble4/180GPa/",
+			"../../data/ensemble5/",
+			"../../data/ensemble6/",
+			"../../data/ensemble7/",
+			"../../data/ensemble8/",
+			"../../data/ensemble9/",
+			"../../data/ensemble10/",
+			"../../data/ensemble11/",
+			"../../data/ensemble12/",
+			"../../data/ensemble13/",
+			"../../data/ensemble14/",
+			"../../data/ensemble15/"],
+	"set_prefix":	"set",    
+	"stop_batch":	1000000,
+	"batch_size":	1,
+
+	"seed":		1,
+
+	"_comment": " display and restart",
+	"_comment": " frequencies counted in batch",
+	"disp_file":	"lcurve.out",
+	"disp_freq":	100,
+	"numb_test":	5,
+	"save_freq":	1000,
+	"save_ckpt":	"model.ckpt",
+	"load_ckpt":	"model.ckpt",
+	"disp_training":true,
+	"time_training":true,
+	"profiling":	false,
+	"profiling_file":"timeline.json",
+	"_comment":	"that's all"
+    },
+
+    "_comment":		"that's all"
+}
+
