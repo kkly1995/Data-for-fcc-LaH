@@ -9,3 +9,5 @@ pair_coeff	2 2 table full.table H_H 0.74
 ```
 
 where particle 1 represents lanthanum and particle 2 represents hydrogen in this case.
+
+The lanthanum ECP used to calculate these energies is from Basis Set Exchange, and can be found [here](https://www.basissetexchange.org/basis/def2-qzvppd/format/nwchem/?version=1&elements=57).
